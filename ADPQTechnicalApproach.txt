@@ -1,0 +1,112 @@
+# ADPQ Technical Approach
+Calerts: The California Citizen Alerts System / http://calerts.forumone.com
+
+________________
+### Introduction
+The State of California is ushering in a new era of procurement efficiency with added emphasis on Agile methodologies, open source, and updated approaches to digital development. Forum One is pleased to participate in the Agile Development Pre-Qualified (ADPQ) Vendor Pool selection process.
+This document describes the technical approach we used to develop the working prototype.  We describe the process of code development and deployment. We also outline our development approach, consistent with the US Digital Services Playbook.
+Forum One is a web design and development agency that has completed over 2000 projects for over 750 public sector organizations. Recent projects include rebuilding the website of the US EPA, rebuilding the website of the US Peace Corps, and designing a new site for the Smithsonian Museum of African American History & Culture. In California we have worked with CHHS, DHCS, CDPH, OSHPD, MHSOAC, and others. We are currently rebuilding the website for the California Air Resources Board.
+Forum One employs Agile / Scrum methodology in all of our projects. We have certified scrummasters on staff.  Forum One also bases nearly all of its development efforts on open source technologies. 
+  
+
+## Our design and development approach in this case involved the following:
+### Vision, Design and Preparation
+Before starting, Forum One designated a Product Owner to play the role of client, while a development team met to internally kick off the project. During the formal kick off meeting with the Product Owner, we developed a vision for the prototype and sketched out what the prototype could look like. The Product Owner was held accountable for the tools success and was assisted by the Scrum Master who assisted with ticket assignments and providing documentation support to the team. 
+### Simple and Intuitive
+In the spirit of [Play 3 for the U.S. Digital Services Playbook] (https://playbook.cio.gov/#play30), we considered extending an existing tool rather than building from scratch. In this case we felt we could best meet the needs of the Product Owner by developing a new tool. 
+### Iterations on Minimum Viable Product
+Because our timeline was very abbreviated (less than a week), we needed to achieve an internal MVP as rapidly as possible. The Product Owner was able to craft appropriate stories, provide minor design enhancements and work with designers to prepare a sketch of required changes to the MVP. During this initial period, the Product Owner sought informal feedback from additional staff members on the tool and garnered feedback on key elements which were captured in additional stories during the Sprint. 
+### Agile Methodologies
+The Product Owner for the prototype relied on a small, intense team who are experts at using agile methodologies to build tools. The team (a Product Owner, Scrum Master, Technical Architect, Backend Developer) met during daily standups, held Sprint Planning and Review meetings, and participated actively in our Agile project management system.  All members of the team were given access to both the Git code repository but also to the project management system, which allowed a virtual team to stay in close collaboration. 
+### Usage of Open-source Technologies
+A large component of our ability to stay lean and develop fast came from the use of open-source technologies. Our team developed the prototype on GitHub, using modern stack of tools that include SCSS, Angular.js, D3, Jenkins, Capistrano, jQuery, Grunt, Bower, and NPM. In addition, our team went so far to even use open source design principles by leveraging [Google Material Design Principles] (https://www.google.com/design/spec/material-design/introduction.html#). Clear instructions for setting up and running the system are also provided later in the README.md file. 
+### Automated Testing and Deployments
+After the MVP had launched and additional tickets were logged for changes to the prototypes, the Backend Developer wrote a series of unit tests and allowed us to identify and few bugs which were then logged into the project management board. The team automated any deployments use Git. 
+### Security and Privacy
+The Amazon EC2 hosting solution is one of the most secure IaaS solutions on the market and is used throughout the government - including on FISMA-approved websites hosted by Forum One. Security is important and our team is well-versed in all NIST, FISMA and FEDRamp security requirements. To monitor the server and application and to maintain its security and privacy, the prototype is being monitored by Monitis which is an all-in-one application monitoring platform used to monitor the website and the server. 
+### Data-driven Decisions
+Because these are prototypes, we don’t yet have a lot of data to support the success or failure of the prototype. Based on Forum One’s prior knowledge in this space, we used existing data and empirical research from other projects to drive our decisions on the tool to choose. Detailed tracking via Google Analytics or a similar analytics tool would be required over a period of time to judge the success of failure of the tool. 
+### Technical Approach
+In the development of the prototype, we adhered to the principles outlined in the U.S. Digital Services Playbook, Forum One included the following characteristics in its design and development approach:
+# Criterion
+	Comment
+	1
+	Assigned one leader, gave that person authority and responsibility, and held that person accountable for the quality of the prototype submitted
+	Assigned project leader Son Tran with the authority and responsibility for the prototype submission.
+	2
+	Assembled a multidisciplinary and collaborative team that includes at a minimum of three of the labor categories limited to the Design Pool labor categories to develop the prototype as quoted in Attachment C
+	We assembled a core team of five members, enlisting the help of additional Forum One staff as required. Labor categories included: Product Manager, Technical Architect, Front End Web Developer, Back End Web Developer, Business Analyst.
+	3
+	Understand what people need, by including people in the prototype design process
+	We began the prototyping process by actually interviewing people we didn’t know near our web development offices. We refined our thinking around a useful web app through this interview process.
+	4
+	Used at least three “human-centered design” techniques or tools
+	In all of our development efforts we use a range of “human-centered design” techniques or tools, as dictated by project scope and timeline. These tools routinely include establishing a background or problem statement, establishing a vision statement, developing audience scenarios, developing personas, and detailing a range of specific use cases. In this project we established a problem statement, organized around personas, and designed towards (at this stage) one specific use case. With a longer time horizon we would augment this with additional use cases.
+	5
+	Used GitHub to Document code commits
+	GitHub is used in all of our development efforts, including the repository used in this project.
+	6
+	Used Swagger to document the RESTful API, and provided a link to the Swagger API
+	We use an Angular.js service to connect to REST APIs, e.g. USGS, NOAA. These APIs are both well documented and  easily read, both by humans and machines, to not rely on the services of Swagger..  Had we needed to design an  API before writing any code or needed to document an API we created, we would have relied on an API specification tool such as Swagger.
+	7
+	Complied with Section 508 of the Americans with Disabilities Act and WCAG 2.0
+	Forum One has experts on staff that have lectured and written extensively on accessibility issues. In this case, due to time constraints and the nature of the task, we didn’t complete a full Section 508 and WCAG 2.0 accessibility audit. Our development team did address accessibility best practices concerning fonts, color contrasts, layouts, and other considerations.
+	8
+	Created or used a design style guide and/or a pattern library
+	Forum One’s creative team combines design + branding + messaging to create stunning digital products. Web and application development routinely includes a formal design style guide for each project. In this case, given the nature of the project, we combined the UX and style guide steps, in part because we relied heavily on branding elements provided by the new California state template (v5). 
+	9
+	Performed usability tests with people
+	Forum One’s user experience team conducts usability testing (both in-person and remote) on all of our major web builds. We retest throughout the duration of projects (as reflected in USDS playbook Play 4). In this case our testing was limited to non-developer members of the team to assure both an intuitive approach and basic site functionality.
+	10
+	Used an iterative approach, where feedback informed subsequent work or versions of the prototype
+	Because this project included a very ambitious timeline, we employed one-day sprints with twice daily standups. Efforts were organized, prioritized and tracked in Jira. 
+	11
+	Created a prototype that works on multiple devices and presents a responsive design
+	All work at Forum One is based on responsive design, often with a “mobile first” orientation. We use an array of tools through our QA process to make sure that our responsive sites respond elegantly (and degrade if required)  across screen sizes and browser types.
+	12
+	Used at least five (5) modern and open-source technologies, regardless of architectural layer (frontend, backend, etc.)
+	As referenced elsewhere, we have used multiple modern and open-source technologies in developing this prototype. These have included  javascript, SCSS,  Angular.js, Jenkins, and Github 
+	13
+	Deployed the prototype on an Infrastructure as a Service (IaaS) or Platform as a Service (PaaS) provider, and indicated which provider they used
+	We use a Parse server hosted by SashidO. This Backend as a Service (BaasS) is a great  resource because gave our developers the freedom to focus on the actual building of the prototype and to not think about the backend. SashidO’s elastic cloud server also provides secure and automated scaling.
+	14
+	Developed automated unit tests for their code
+	We use Javascript Lint check all your JavaScript source code for common mistakes.  Based on the JavaScript engine for the Firefox browser, this robust framework checks JavaScript syntax and examines the coding techniques used in the script to warn against questionable practices.
+
+	15
+	Setup or used a continuous integration system to automate the running of tests and continuously deployed their code to their IaaS or PaaS provider
+	We use Jenkins to perform continuous integration and build automation. Jenkins also monitors the execution of the steps and allows to stop the process if one of the steps fails. This open source tool  also sends out notification about the build success or failure.
+	16
+	Setup or used configuration management
+	Tapping into its basic functionality of executing a predefined list of steps, whose trigger can be time or event based, we use Jenkins to establish and maintain the configuration management of our software application.
+	17
+	Setup or used continuous monitoring
+	The SashidO console allows us to set up scheduled jobs for continuous monitoring of the application.
+	18
+	Deployed their software in an open source container, such as Docker (i.e. utilized operating system level virtualization)
+	The SashidO dashboard will deploy  the whole app, database, Cloud Code, audiences, settings etc.
+	19
+	Provided sufficient documentation to install and run their prototype on another machine
+	We provide documentation in our Github detailing all the steps to install and run the prototype on any machine and including on a hosted cloud service.
+	20
+	Prototype and underlying platforms used to create and run the prototype are openly licensed and free of charge
+	See our License.md waiver in our repository
+
+### Code Flow
+This diagram demonstrates the code flow from the CAlerts User to the Javascript Library (Angular.js), to a call to a REST API, to return results from Elasticsearch back to the user:
+
+
+CAlert Call to API.jpg 
+
+
+### Contact Us!
+We would be delighted to discuss the approach we take in general to development projects, and also provide more detail concerning this project if requested. We look forward to working further with the State.
+
+
+Jim Cashel, Chairman
+Forum One
+cashel@ForumOne.com
+San Francisco Office: 415 717 8212
+
+
+Page
